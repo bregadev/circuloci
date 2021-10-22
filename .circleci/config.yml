@@ -19,7 +19,7 @@ jobs:
           command: "echo Hello, jefe!"
   diga-hola:
     docker:
-      -image: alpine/latest
+      - image: alpine/latest
     steps:
       - checkout
       - run:
