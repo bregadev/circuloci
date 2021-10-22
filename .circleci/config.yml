@@ -21,7 +21,7 @@ jobs:
     docker:
       - image: alpine/latest
     steps:
-      - checkout
+      #- checkout
       - run:
           name: "diga hola" 
           command: "echo Hola, Mundo!"
