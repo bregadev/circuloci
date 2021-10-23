@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, jefe!"
+          command: "echo Hello, $My_Name!"
   diga-hola:
     docker:
       - image: cimg/base:stable
