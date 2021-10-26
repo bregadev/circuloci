@@ -19,7 +19,7 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
-              - .
+              - ./*
       - run:
           name: "Say hello"
           command: echo "sHello, $My_Name!" > output.txt 
