@@ -22,7 +22,7 @@ jobs:
               - ./*
       - run:
           name: "Say hello"
-          command: echo "sHello, $My_Name!" > output.txt; cat output.txt
+          command: echo "Hello, $My_Name!" > output.txt; cat output.txt
 
       
 
@@ -32,7 +32,7 @@ jobs:
     steps:
       #- checkout
       - attach_workspace:
-          at: .
+          at: ./
       - run:
           name: "diga hola" 
           command: ls -la
