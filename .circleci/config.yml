@@ -18,7 +18,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, $My_Name!" > /tmp/workspace/output.txt 
+          command: echo "sHello, $My_Name!" > /tmp/workspace/output.txt 
 
       - persit_to_workspace:
           root: /tmp/workspace
