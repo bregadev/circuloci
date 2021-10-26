@@ -16,7 +16,7 @@ jobs:
           My_Name: horacio   
     steps:
       - checkout
-      - persit_to_workspace:
+      - persist_to_workspace:
           root: /tmp/workspace
           paths:
               - .
