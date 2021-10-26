@@ -22,7 +22,7 @@ jobs:
               - ./*
       - run:
           name: "Say hello"
-          command: echo "sHello, $My_Name!" > output.txt 
+          command: echo "sHello, $My_Name!" > output.txt; cat output.txt
 
       
 
