@@ -34,7 +34,7 @@ jobs:
     steps:
       - checkout
       - attach_workspace:
-          at: ~/
+          at: ~/project
       - run:
           name: "diga hola" 
           command: cat ~/output.txt
