@@ -16,13 +16,13 @@ jobs:
           My_Name: horacio   
     steps:
       - checkout
+      - run:
+          name: "Say hello"
+          command: echo "Hello, $My_Name!" > output.txt
       - persist_to_workspace:
           root: ~/
           paths:
               - output.txt
-      - run:
-          name: "Say hello"
-          command: echo "Hello, $My_Name!" > ~/output.txt; 
 
       
 
