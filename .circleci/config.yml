@@ -45,3 +45,5 @@ workflows:
     jobs:
       - say-hello
       - diga-hola
+          requires:
+            - say-hello
