@@ -16,14 +16,15 @@ jobs:
           My_Name: horacio   
     steps:
       - checkout
-      - run:
-          name: "Say hello"
-          command: echo "sHello, $My_Name!" > /tmp/workspace/output.txt 
-
       - persit_to_workspace:
           root: /tmp/workspace
           paths:
               - .
+      - run:
+          name: "Say hello"
+          command: echo "sHello, $My_Name!" > /tmp/workspace/output.txt 
+
+      
 
   diga-hola:
     docker:
