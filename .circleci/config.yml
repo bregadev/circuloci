@@ -17,12 +17,12 @@ jobs:
     steps:
       - checkout
       - persist_to_workspace:
-          root: /tmp/workspace
+          root: /tmp
           paths:
               - .
       - run:
           name: "Say hello"
-          command: echo "sHello, $My_Name!" > /tmp/workspace/output.txt 
+          command: echo "sHello, $My_Name!" > /tmp/output.txt 
 
       
 
