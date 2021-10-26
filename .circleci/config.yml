@@ -30,7 +30,7 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
-      #- checkout
+      - checkout
       - attach_workspace:
           at: ./
       - run:
