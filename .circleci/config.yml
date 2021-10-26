@@ -17,12 +17,12 @@ jobs:
     steps:
       - checkout
       - persist_to_workspace:
-          root: .
+          root: ~/
           paths:
-              - ./*
+              - output.txt
       - run:
           name: "Say hello"
-          command: echo "Hello, $My_Name!" > output.txt; cat output.txt
+          command: echo "Hello, $My_Name!" > ~/output.txt; 
 
       
 
