@@ -10,9 +10,9 @@ commands:
     parameters:
       to:
         type: string
-        default: 'this worked, this worked!'
+        default: "this worked, this worked!"
     steps:
-      - run: echo <<parameters.to>>
+      - run: echo << parameters.to >>
 jobs:
   say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
