@@ -4,6 +4,15 @@ version: 2.1
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+commands:
+  printvariable:
+    despcription: "a very simple command demo"
+    parameters:
+      to:
+        type: string
+        default: 'this worked, this worked!'
+    steps:
+      - run: echo <<parameters.to>>
 jobs:
   say-hello:
     # Specify the execution environment. You can specify an image from Dockerhub or use one of our Convenience Images from CircleCI's Developer Hub.
@@ -25,8 +34,6 @@ jobs:
           paths:
               - output.txt
 
-      
-
   diga-hola:
 
     docker:
@@ -38,6 +45,13 @@ jobs:
       - run:
           name: "diga hola" 
           command: cat ~/project/output.txt
+
+  diga-hola:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - printvariable
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
