@@ -43,7 +43,11 @@ jobs:
           at: ~/project
       - run:
           name: "diga hola" 
-          command: cat ~/project/output.txt
+          command: return 1
+      - run:
+          name: "failed job"
+          command: "curl http://google.com"
+          when: on_fail
 
   hola-mundo:
     docker:
