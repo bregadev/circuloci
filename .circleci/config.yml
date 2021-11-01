@@ -64,7 +64,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "8f:f0:59:9f:22:37:c7:4e:27:9d:48:f8:bf:4e:4f:30"
-      -run:
+      - run:
         name: Install Dependencies
         command: 
           apk add --update ansible
