@@ -69,6 +69,9 @@ jobs:
           command: 
             "apk add --update ansible"
       - run:
+          name: add ssh key
+          command: ssh-keyscan -H 18.237.115.150 >> ~/.ssh/known_hosts
+      - run:
           name: "configure server"
           command: 
             "ansible-playbook -i inventory main.yml"
