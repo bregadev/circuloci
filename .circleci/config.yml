@@ -67,7 +67,7 @@ jobs:
       - run:
           name: "Install Dependencies"
           command: 
-            "apk add --update ansible"
+            "apk add --update ansible; apk add -qU openssh"
       - run:
           name: add ssh key
           command: ssh-keyscan -H 18.237.115.150 >> ~/.ssh/known_hosts
