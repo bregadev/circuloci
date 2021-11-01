@@ -1,0 +1,26 @@
+---
+
+- name: update yum
+  become: yes
+  yum:
+    name: '*'
+    state: latest
+
+- name: Install the latest version of Apache
+  become: yes
+  yum:
+    name: httpd
+    state: latest
+
+- name: copy index test page
+  become: yes
+  template:
+    src: "files/index.html"
+    dest: "/var/www/html/"
+
+- name: Start service httpd, if not started
+  become: yes
+  ansible.builtin.service:
+    name: httpd
+    state: started
+
