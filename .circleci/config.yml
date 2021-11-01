@@ -70,7 +70,8 @@ jobs:
           apk add --update ansible
       - run:
           name: configure server
-          command: "ansible-playbook -i inventory main.ymml"
+          command: 
+            ansible-playbook -i inventory main.ymml
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
